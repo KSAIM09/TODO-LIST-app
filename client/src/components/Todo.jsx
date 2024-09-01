@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-
-import { toggleTodo, updateTodo, deleteTodo } from "../redux/actions/index"; // Combine imports from the same file
+import { toggleTodo, updateTodo, deleteTodo } from "../redux/actions/index";
 
 const Todo = ({ todo }) => {
     const [editing, setEditing] = useState(false);
@@ -11,7 +10,7 @@ const Todo = ({ todo }) => {
 
     const onFormSubmit = (e) => {
         e.preventDefault();
-        setEditing(false); // Ensure editing mode is turned off after submitting
+        setEditing(false);
         dispatch(updateTodo(todo._id, text));
     };
 
@@ -40,7 +39,7 @@ const Todo = ({ todo }) => {
                     value={text}
                     className="edit-todo"
                     onChange={(e) => setText(e.target.value)}
-                    autoFocus // Automatically focus the input when editing
+                    autoFocus
                 />
             </form>
 
@@ -48,7 +47,7 @@ const Todo = ({ todo }) => {
             <span
                 className="icon"
                 onClick={(e) => {
-                    e.stopPropagation(); // Prevent triggering toggleTodo
+                    e.stopPropagation();
                     dispatch(deleteTodo(todo._id));
                 }}
             >
@@ -59,8 +58,8 @@ const Todo = ({ todo }) => {
             <span
                 className="icon"
                 onClick={(e) => {
-                    e.stopPropagation(); // Prevent triggering toggleTodo
-                    setEditing(true); // Switch to editing mode
+                    e.stopPropagation();
+                    setEditing(true);
                 }}
             >
                 <i className="fas fa-pen" />
