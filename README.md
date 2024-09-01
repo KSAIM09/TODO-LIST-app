@@ -18,3 +18,10 @@ Ensure that both the frontend and backend servers are running simultaneously. Yo
 Access the Application
 Frontend: Open your web browser and go to http://localhost:3000 to see the React application.
 Backend: The backend API will be accessible at http://localhost:3001.# Todo-List-App
+
+
+# Vercel
+Live app here: https://todo-list-app-xi-azure.vercel.app/
+
+# Render
+https://todo-list-app-server-s6yh.onrender.com
