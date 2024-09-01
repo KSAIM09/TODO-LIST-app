@@ -1,0 +1,12 @@
+# .gitignore
+
+# Ignore node_modules for backend
+/server/node_modules/
+
+# Ignore node_modules for frontend (if any)
+client/node_modules/
+
+# Ignore other common files
+.DS_Store
+*.log
+*.env
