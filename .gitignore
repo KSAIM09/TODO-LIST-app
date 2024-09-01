@@ -9,4 +9,4 @@ client/node_modules/
 # Ignore other common files
 .DS_Store
 *.log
-*.env
+
